@@ -183,14 +183,15 @@ if __name__ == '__main__':
 
 ## Задача 2 (*)
 1. Создайте в yandex cloud container registry с именем "test" с помощью "yc tool" .
-![Alt text](1/2.1.jpg)
+![Alt text](2/2.1.jpg)
 2. Настройте аутентификацию вашего локального docker в yandex container registry.
-![Alt text](1/2.2.jpg)
+![Alt text](2/2.2.jpg)
 3. Соберите и залейте в него образ с python приложением из задания №1.
-![Alt text](1/2.3.jpg)
+![Alt text](2/2.3.jpg)
 4. Просканируйте образ на уязвимости.
 5. В качестве ответа приложите отчет сканирования.
 
+[Открыть Отчет сканирования](./2/vulnerabilities.csv)
 
 
 ## Задача 3
