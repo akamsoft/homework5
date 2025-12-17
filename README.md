@@ -232,14 +232,24 @@ if __name__ == '__main__':
 Запустите в Yandex Cloud ВМ (вам хватит 2 Гб Ram).
 Подключитесь к Вм по ssh и установите docker.
 Напишите bash-скрипт, который скачает ваш fork-репозиторий в каталог /opt и запустит проект целиком.
+
 [myapp_install.sh](./4/myapp_install.sh)
+
 ![Alt text](4/4.3.jpg)
+
 ![Alt text](4/4.4.jpg)
+
 ![Alt text](4/4.5.jpg)
+
 Зайдите на сайт проверки http подключений, например(или аналогичный): ```https://check-host.net/check-http``` и запустите проверку вашего сервиса ```http://<внешний_IP-адрес_вашей_ВМ>:8090```. Таким образом трафик будет направлен в ingress-proxy. Трафик должен пройти через цепочки: Пользователь → Internet → Nginx → HAProxy → FastAPI(запись в БД) → HAProxy → Nginx → Internet → Пользователь
+
 ![Alt text](4/4.6.jpg)
+
 Повторите SQL-запрос на сервере и приложите скриншот и ссылку на fork.
+
 ![Alt text](4/sql.jpg)
+
+[https://github.com/akamsoft/shvirtd-example-python.git](https://github.com/akamsoft/shvirtd-example-python.git)
 
 ## Задача 5 (*)
 1. Напишите и задеплойте на вашу облачную ВМ bash скрипт, который произведет резервное копирование БД mysql в директорию "/opt/backup" с помощью запуска в сети "backend" контейнера из образа ```schnitzler/mysqldump``` при помощи ```docker run ...``` команды. Подсказка: "документация образа."
