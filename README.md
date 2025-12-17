@@ -252,10 +252,35 @@ if __name__ == '__main__':
 [https://github.com/akamsoft/shvirtd-example-python.git](https://github.com/akamsoft/shvirtd-example-python.git)
 
 ## Задача 5 (*)
-1. Напишите и задеплойте на вашу облачную ВМ bash скрипт, который произведет резервное копирование БД mysql в директорию "/opt/backup" с помощью запуска в сети "backend" контейнера из образа ```schnitzler/mysqldump``` при помощи ```docker run ...``` команды. Подсказка: "документация образа."
-2. Протестируйте ручной запуск
-3. Настройте выполнение скрипта раз в 1 минуту через cron, crontab или systemctl timer. Придумайте способ не светить логин/пароль в git!!
-4. Предоставьте скрипт, cron-task и скриншот с несколькими резервными копиями в "/opt/backup"
+Напишите и задеплойте на вашу облачную ВМ bash скрипт, который произведет резервное копирование БД mysql в директорию "/opt/backup" с помощью запуска в сети "backend" контейнера из образа ```schnitzler/mysqldump``` при помощи ```docker run ...``` команды. Подсказка: "документация образа."
+
+[backup.sh](./5/backup.sh)
+
+![Alt text](5/5.1.1.jpg)
+
+![Alt text](5/5.1.2.jpg)
+
+![Alt text](5/5.1.3.jpg)
+
+Протестируйте ручной запуск
+
+![Alt text](5/5.2.1.jpg)
+
+![Alt text](5/5.2.2.jpg)
+
+![Alt text](5/5.2.3.jpg)
+
+Настройте выполнение скрипта раз в 1 минуту через cron, crontab или systemctl timer. Придумайте способ не светить логин/пароль в git!!
+
+![Alt text](5/5.3.jpg)
+
+Предоставьте скрипт, cron-task и скриншот с несколькими резервными копиями в "/opt/backup"
+
+![Alt text](5/5.4.1.jpg)
+
+![Alt text](5/5.4.2.jpg)
+
+![Alt text](5/5.4.3.jpg)
 
 ## Задача 6
 Скачайте docker образ ```hashicorp/terraform:latest``` и скопируйте бинарный файл ```/bin/terraform``` на свою локальную машину, используя dive и docker save.
